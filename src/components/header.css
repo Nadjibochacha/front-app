@@ -1,0 +1,43 @@
+#navbar img{
+    height: 50px;
+}
+#navbar .nav-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+#navbar .item{
+    transition: all ease-out 0.7s;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 0.05rem;
+    position: relative;
+}
+#navbar .item:hover{
+    transform: scale(1.05);
+    color: rgb(255, 153, 0);
+}
+#navbar .item::after{
+    content: "";
+    height: 2px;
+    width: 0;
+    background: rgb(255, 153, 0);
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    transition: all ease-out 0.7s;
+}
+#navbar .item:hover::after{
+    width: 96%;
+}
+.btn-orange{
+    background-color: rgb(255, 153, 0);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}

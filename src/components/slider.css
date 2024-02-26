@@ -1,0 +1,17 @@
+#slide{
+    height: 34rem;
+    margin-top: 30px;
+    text-align: center;
+    width: 90%;
+}
+#slide img{
+    height: 33rem;
+    border-radius: 15px;
+}
+#slide .caption{
+    background: #0c0c0c56;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    
+}

@@ -1,0 +1,11 @@
+.title{
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 0.14rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+#about img{
+    height: 25rem;
+    width: 100%;
+}
