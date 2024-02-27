@@ -33,7 +33,7 @@
 #navbar .item:hover::after{
     width: 96%;
 }
-.btn-orange{
+.btn-orang{
     background-color: rgb(255, 153, 0);
     border: none;
     border-radius: 8px;
