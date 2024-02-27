@@ -1,6 +1,7 @@
 #navbar img{
     height: 50px;
 }
+
 #navbar .nav-items{
     display: flex;
     justify-content: center;
