@@ -4,7 +4,7 @@ import './about.css';
 import Button from 'react-bootstrap/esm/Button';
 const About = () => {
   return (
-    <div id='about' className='mt-5'>
+    <div id='about' className='mt-5 container'>
         <div className="card mb-3">
             <div className="row g-0">
                 <div className="col-md-5">
@@ -22,10 +22,8 @@ const About = () => {
                             From flu shots to chronic condition management, we're here to help you live your healthiest life. 
                             Experience the difference at SalCo Pharmacy today. Your well-being is our priority. 
                             Visit us online for expert guidance and peace of mind. 
-                            Explore our selection of trusted brands and healthcare essentials.
-                            Embrace a healthier tomorrow with SalCo Pharmacy by your side.
                         </p>
-                        <Button variant='' className='btn btn-orang' href='/products'>shop now</Button>
+                        <Button variant='' className='btn btn-orange' href='/products'>shop now</Button>
                     </div>
                 </div>
             </div>

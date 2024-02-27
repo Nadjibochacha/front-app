@@ -1,0 +1,40 @@
+.cardP:hover{
+   box-shadow: 0 0 5px rgba(56, 56, 56, 0.61);
+   transform: scale(1.02);
+}
+.cardP{
+    transition: all 0.4s ease-in;
+    position: relative;
+    overflow: hidden;
+}
+.cardP .img{
+    border-bottom: 1px solid gray;
+}
+.cardP .sticker{
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    background: blue;
+    width: 100px;
+    box-shadow: 0 0 7px blue;
+    transform: rotate(-40deg);
+    position: absolute;
+    top: 10px;
+    left: -22px;
+    border-radius: 10px;
+}
+#new .btn-outline-orange{
+    background-color:transparent ;
+    border:2px solid rgb(255, 153, 0) ;
+    border-radius: 8px;
+    color:rgb(255, 153, 0);
+    text-transform: uppercase;
+    text-align: center;
+    transition: all ease-in 0.5s;
+}
+#new .btn-outline-orange:hover{
+    background-color: rgb(255, 153, 0);
+    letter-spacing: 0.1rem;
+    color: white;
+}
