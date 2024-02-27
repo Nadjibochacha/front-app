@@ -6,6 +6,22 @@
     text-transform: uppercase;
 }
 #about img{
-    height: 25rem;
+    height: 27rem;
     width: 100%;
+}
+#about .btn-orang{
+    background-color: rgb(255, 153, 0);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all ease-in 0.7s;
+}
+#about .btn-orang:hover{
+    transform: scale(1.2);
+    letter-spacing: 0.1rem;
+}
+#about .card-text{
+    font-size: 1.1rem;
 }

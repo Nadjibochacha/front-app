@@ -25,7 +25,7 @@ const About = () => {
                             Explore our selection of trusted brands and healthcare essentials.
                             Embrace a healthier tomorrow with SalCo Pharmacy by your side.
                         </p>
-                        <div className='btn btn-orang'>shop now</div>
+                        <Button variant='' className='btn btn-orang' href='/products'>shop now</Button>
                     </div>
                 </div>
             </div>
