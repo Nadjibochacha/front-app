@@ -9,8 +9,8 @@ const Comments = () => {
             <Comment title='ABDERRAHMENE'/>
             <Comment title='ABDELBASET'/>
             <Comment title='WASSIM'/>
-            <Comment title="LILIA (WASSIM's wife)"/>
-            <Comment title="RAHMA (ABDELBASET's wife)"/>
+            <Comment title="LILIA"/>
+            <Comment title="RAHMA"/>
         </div>
     </div>
   )
