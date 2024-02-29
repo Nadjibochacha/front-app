@@ -9,7 +9,7 @@
     height: 27rem;
     width: 100%;
 }
-#about .btn-orange{
+#about .btn-orange, #new .btn-orange{
     background-color: rgb(255, 153, 0);
     border: none;
     border-radius: 8px;
@@ -18,7 +18,7 @@
     text-align: center;
     transition: all ease-in 0.7s;
 }
-#about .btn-orange:hover{
+.btn-orange:hover{
     transform: scale(1.05);
     letter-spacing: 0.1rem;
 }

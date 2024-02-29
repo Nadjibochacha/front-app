@@ -8,7 +8,7 @@ const About = () => {
         <div className="card mb-3">
             <div className="row g-0">
                 <div className="col-md-5">
-                    <img src={pic4} className="img-fluid rounded-start" alt="..." />
+                    <img src={pic4} className="h-100 rounded-start" alt="..." />
                 </div>
                 <div className="col-md-7">
                     <div className="card-body">

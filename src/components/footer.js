@@ -4,17 +4,18 @@ import logo1 from '../images/salco.png';
 import { FaLocationArrow } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import Form from 'react-bootstrap/Form';
-import { TiSocialFacebookCircular } from "react-icons/ti";
+import { FaFacebookSquare } from "react-icons/fa";
 import { SlSocialInstagram } from "react-icons/sl";
 import { SlSocialTwitter } from "react-icons/sl";
 import { SlSocialLinkedin } from "react-icons/sl";
+import Button from 'react-bootstrap/esm/Button';
 
 const Footer = () => {
   return (
     <div id='footer'>
         <div className='row justify-content-between'>
             <div className='col-md-4'>
-                <img src={logo1} alt='logo' />
+                <img src={logo1} alt='logo' width='50%' />
                 <div className='desc'>
                     Welcome to SALCO PHARMACY,
                     your trusted destination for quality 
@@ -29,7 +30,7 @@ const Footer = () => {
                     +213663503661
                 </div>
                 <div className='links'>
-                    <a href=''><TiSocialFacebookCircular/></a>
+                    <a href=''><FaFacebookSquare/></a>
                     <a href=''><SlSocialInstagram/></a>
                     <a href=''><SlSocialTwitter/></a>
                     <a href=''><SlSocialLinkedin/></a>
@@ -57,6 +58,7 @@ const Footer = () => {
                         <Form.Label>Comment</Form.Label>
                         <Form.Control as="textarea" rows={3} />
                     </Form.Group>
+                    <Button variant='outline-light' className='w-25 '>Send</Button>
                 </Form>
             </div>
             <div className="foot-bar text-center mt-5">

@@ -15,9 +15,8 @@ const Header = () => {
           <Nav className="nav-items">
             <Nav.Link href="/" className='item'>Home</Nav.Link>
             <Nav.Link href="/#about" className='item'>About</Nav.Link>
-            <Nav.Link href="/#new" className='item'>new products</Nav.Link>
-            <Nav.Link href="/products" className='item'>medical drugs & products</Nav.Link>
-            <Nav.Link href="/#contact" className='item'>contact us</Nav.Link>
+            <Nav.Link href="/#new" className='item'>products</Nav.Link>
+            <Nav.Link href="/#footer" className='item'>contact</Nav.Link>
             <Nav.Link href="/login" className='item'>login</Nav.Link>
           </Nav>
         </Navbar.Collapse>
