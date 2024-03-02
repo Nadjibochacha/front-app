@@ -6,13 +6,13 @@ const About = () => {
   return (
     <div id='about' className='mt-5 container'>
         <div className="card mb-3">
-            <div className="row g-0">
+            <div className="row g-0 align-items-center">
                 <div className="col-md-5">
-                    <img src={pic4} className="h-100 rounded-start" alt="..." />
+                    <img src={pic4} className="rounded-start" alt="..." />
                 </div>
                 <div className="col-md-7">
                     <div className="card-body">
-                        <div className='title'>read about us</div>
+                        <div className='title mb-3'>read about us</div>
                         <p className="card-text">
                             Welcome to SalCo Pharmacy, your neighborhood hub for wellness solutions.
                             Discover a comprehensive range of prescription medications, vitamins, and health products tailored to your needs.
@@ -23,7 +23,7 @@ const About = () => {
                             Experience the difference at SalCo Pharmacy today. Your well-being is our priority. 
                             Visit us online for expert guidance and peace of mind. 
                         </p>
-                        <Button variant='' className='btn btn-orange' href='/products'>shop now</Button>
+                        <Button variant='' className='btn btn-orange mt-3' href='/products'>shop now</Button>
                     </div>
                 </div>
             </div>

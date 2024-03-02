@@ -10,7 +10,7 @@ import Button from 'react-bootstrap/esm/Button';
 const Newproducts = () => {
     return (
        <div id='new' className='mt-4'>
-            <div className='title'>products</div>
+            <div className='title'>medications</div>
             <div className='row mt-3'>
                 <Product title='something1' state='new' src ={product} price="20" />
                 <Product title='something2' state='new' src ={product1} price="31" />

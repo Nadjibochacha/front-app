@@ -40,7 +40,7 @@ const Footer = () => {
                 <h3>Catigories</h3>
                 <ul>
                     <li><a href='/'>home</a></li>
-                    <li><a href='/products'>drugs & products</a></li>
+                    <li><a href='/products'>medications</a></li>
                     <li><a href='/products'>cat1</a></li>
                     <li><a href='/products'>cat2</a></li>
                     <li><a href='/products'>cat3</a></li>

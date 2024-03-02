@@ -15,8 +15,8 @@ const Slider = () => {
             alt="First slide"
             />
             <Carousel.Caption className='caption'>
-                <h5>First slide label</h5>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <h3>SalCo Pharmacy</h3>
+                <p>Your trusted destination for quality healthcare solutions</p>
             </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -26,8 +26,8 @@ const Slider = () => {
             alt="Second slide"
             />
             <Carousel.Caption className='caption'>
-                <h5>Second slide label</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h3>SalCo Pharmacy</h3>
+                <p>Explore our wide range of medications, and health products tailored to meet your wellness needs</p>
             </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -37,9 +37,9 @@ const Slider = () => {
             alt="Third slide"
             />
             <Carousel.Caption className='caption'>
-                <h5>Third slide label</h5>
+                <h3>SalCo Pharmacy</h3>
                 <p>
-                    Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                    Discover convenience, reliability, and compassion today
                 </p>
             </Carousel.Caption>
         </Carousel.Item>
