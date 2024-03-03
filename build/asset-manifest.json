@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1ea69d4b.css",
+    "main.js": "/static/js/main.f0846912.js",
+    "static/media/pic1.jpg": "/static/media/pic1.d94089e487af1e33e0c5.jpg",
+    "static/media/pic2.jpg": "/static/media/pic2.9a89cbeb018112b15d0b.jpg",
+    "static/media/pic4.jpg": "/static/media/pic4.331610b1ca0211363ffe.jpg",
+    "static/media/pic3.jpg": "/static/media/pic3.c0ba423393cfad0734bd.jpg",
+    "static/media/product2.jpg": "/static/media/product2.2ff161b2a68c862bedec.jpg",
+    "static/media/salco.png": "/static/media/salco.54ec208dd8506f5992de.png",
+    "static/media/product.jpg": "/static/media/product.4cb1ec88ec968b6d7421.jpg",
+    "static/media/product1.jpg": "/static/media/product1.6c2d9b926b4bcec821f2.jpg",
+    "index.html": "/index.html",
+    "main.1ea69d4b.css.map": "/static/css/main.1ea69d4b.css.map",
+    "main.f0846912.js.map": "/static/js/main.f0846912.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ea69d4b.css",
+    "static/js/main.f0846912.js"
+  ]
+}
