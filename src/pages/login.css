@@ -1,1 +1,17 @@
- 
+#login .circle{
+    width: 20rem;
+    height: 20rem;
+    background: blue;
+    border-radius: 100%;
+    position: fixed;
+    bottom: -60px;
+}
+#login .rectengle{
+    width: 20rem;
+    height: 30rem;
+    background: red;
+    transform: rotate(45deg);
+    position: fixed;
+    right: -70px;
+    top: -30px;
+}

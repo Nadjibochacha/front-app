@@ -16,6 +16,8 @@ const Login = () => {
           </div>
         </div>
       </div> 
+      <div className='circle'></div>
+      <div className='rectengle'></div>
     </div>
   )
 }
