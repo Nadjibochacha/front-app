@@ -39,12 +39,12 @@ const Footer = () => {
             <div className='col-md-2'>
                 <h3>Catigories</h3>
                 <ul>
-                    <li><a href='/'>home</a></li>
-                    <li><a href='/products'>medications</a></li>
-                    <li><a href='/products'>cat1</a></li>
-                    <li><a href='/products'>cat2</a></li>
-                    <li><a href='/products'>cat3</a></li>
-                    <li><a href='/products'>cat4</a></li>
+                    <li className='mb-3'><a href='/'>home</a></li>
+                    <li className='mb-3'><a href='/products'>medications</a></li>
+                    <li className='mb-3'><a href='/products#dietary'>Dietary supplements</a></li>
+                    <li className='mb-3'><a href='/products#paraph'>Parapharmaceuticals</a></li>
+                    <li className='mb-3'><a href='/products#pharma'>Pharmaceuticals</a></li>
+                    <li className=''><a href='/products#pain'>Pain and fever relievers</a></li>
                 </ul>
             </div>
             <div className='col-md-5'>
@@ -62,7 +62,7 @@ const Footer = () => {
                 </Form>
             </div>
             <div className="foot-bar text-center mt-5">
-                Copyright © 2024: <a href='https://drive.google.com/file/d/1Kcbe2snM_8twjmnw9EJzPWdpm7OV9HTi/view?usp=sharing'>MED DEV</a>
+                Copyright © 2024: <a className='text-light' href='https://drive.google.com/file/d/1Kcbe2snM_8twjmnw9EJzPWdpm7OV9HTi/view?usp=sharing'>MED DEV</a>
             </div>
         </div>
     </div>
