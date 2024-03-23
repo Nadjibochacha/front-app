@@ -1,0 +1,62 @@
+#pharmacy .menu{
+    background: #283342;
+    width: 250px;
+    height: 100vh;
+
+}
+#pharmacy .menu ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    width: 100%;
+}
+#pharmacy .menu ul li{
+    transition: all 0.5s ease-in;
+    border-radius: 8px;
+    text-align: start;
+    margin: 5px 0;
+}
+#pharmacy .menu ul li:hover{
+    background: #009099;
+    transform: scale(1.02);
+}
+#pharmacy .menu ul{
+    list-style: none;
+    padding:0 10px;
+}
+#pharmacy .menu ul li a span{
+    margin-left: 20px;
+    font-size: 1.5rem;
+}
+#pharmacy .menu .name img{
+    width: 40px;
+}
+#pharmacy .menu .name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    color: white;
+    border-bottom: solid 1px gray;
+}
+#pharmacy{
+    display: flex;
+    background: rgb(228, 228, 228);
+}
+#pharmacy .content .globl-title{
+    padding: 1.6px 20px;
+    border-bottom: solid #1d242e31 1px;
+    width: 100%;
+    text-align: start;
+}
+#pharmacy .content .globl-title h3{
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.04rem;
+}
+#pharmacy .content .globl-title p{
+
+}
