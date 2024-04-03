@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Form, Button, Row, Col } from 'react-bootstrap'; // Import necessary components from react-bootstrap
-import { FaFacebookSquare } from 'react-icons/fa'; // Assuming you've imported necessary icons
-import { SlSocialInstagram, SlSocialTwitter } from 'react-icons/sl'; // Assuming you've imported necessary icons
+import { Form, Button, Row, Col } from 'react-bootstrap';
+import { FaFacebookSquare } from 'react-icons/fa';
+import { SlSocialInstagram, SlSocialTwitter } from 'react-icons/sl';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom'; // Assuming you're using react-router-dom for navigation
+import { useNavigate } from 'react-router-dom';
 import './login.css';
 
 const Login = () => {
