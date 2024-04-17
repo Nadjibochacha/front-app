@@ -1,4 +1,4 @@
-#login .circle{
+#login .circle, #sign .circle{
     width: 20rem;
     height: 20rem;
     background: radial-gradient(#0038FF ,#0038FF10 );
@@ -8,7 +8,7 @@
     left: -130px;
     z-index: 0;
 }
-#login .rectengle{
+#login .rectengle, #sign .rectengle{
     width: 20rem;
     height: 25rem;
     background-color: #e35e6a;
@@ -18,49 +18,49 @@
     top: -40px;
     z-index: 0;
 }
-#login{
+#login, #sign{
     display: flex;
     justify-content: center;
     align-items: center;
     background:#d1d1d1;
     height: 100%;
 }
-#login .container{
+#login .container, #sign .container{
     z-index: 3;
 }
 
-#login .row .col-lg-7{
+#login .row .col-lg-7, #sign .row .col-lg-7{
     background: white;
     padding: 100px 50px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;    
 }
-#login .row .col-lg-5{
+#login .row .col-lg-5, #sign .row .col-lg-5{
     background: rgb(255, 153, 0);
     padding: 100px 50px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;    
 }
-#login .row .col-lg-5 p{
+#login .row .col-lg-5 p, #sign .row .col-lg-5 p{
     color: white;
     font-size: 1.05rem;
 }
 @media  (max-width:991px) {
-    #login .row .col-lg-7{
+    #login .row .col-lg-7, #sign .row .col-lg-7{
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
         border-top-right-radius: 0px;    
     }
-    #login .row .col-lg-5{
+    #login .row .col-lg-5, #sign .row .col-lg-5{
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;    
         border-bottom-left-radius: 0px; 
     }
 }
-#login .input{
+#login .input,#sign .input{
     background: #e0e0e09f;
 }
-#login .input:focus{
+#login .input:focus, #sign .input:focus{
     outline: none;
     box-shadow: none;
     border: 1px solid rgb(255, 153, 0);

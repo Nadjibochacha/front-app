@@ -9,7 +9,7 @@
     height: 32rem;
     width: 100%;
 }
-#about .btn-orange, #new .btn-orange, #login .btn-orange{
+#about .btn-orange, #new .btn-orange, #login .btn-orange, #sign .btn-orange{
     background-color: rgb(255, 153, 0);
     border: none;
     border-radius: 8px;

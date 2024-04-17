@@ -27,7 +27,6 @@ const Login = () => {
       window.alert('An error occurred. Please try again.');
     }
   };
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setValues(prevValues => ({
@@ -54,7 +53,7 @@ const Login = () => {
               <a className='col-1 text-secondary' style={{ fontSize: "25px" }} href=''><SlSocialInstagram /></a>
               <a className='col-1 text-secondary' style={{ fontSize: "25px" }} href=''><SlSocialTwitter /></a>
             </div>
-            <Form onSubmit={handleSubmit}>
+            <Form onSubmit={handleSubmit} >
               <Form.Group as={Row} className="mb-3 justify-content-center text-secondary" controlId="formPlaintextEmail">
                 <Form.Label column sm="2">
                   Email
@@ -72,13 +71,16 @@ const Login = () => {
                   <Form.Control className='input' name='password' type="password" placeholder="Password" value={values.password} onChange={handleChange} />
                 </Col>
               </Form.Group>
-              <Button variant='' type='submit' className='btn btn-orange w-25 mt-5'>Login</Button>
+              <Button variant='' type='submit' className='btn btn-orange w-25 mt-3'>Login</Button>
             </Form>
+            <div className='mt-2'>
+              <a href='/sign' className='text-center'>Sign Up</a>
+            </div>
           </div>
         </div>
       </div>
       <div className='circle'></div>
-      <div className='rectangle'></div>
+      <div className='rectengle'></div>
     </div>
   );
 };

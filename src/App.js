@@ -5,6 +5,7 @@ import Pharmaien from './pages/pharmaien';
 import Venteur from './pages/venteur';
 import Login from './pages/login';
 import Products from './pages/products';
+import Sign from './pages/sign';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path='/pharmacien' element ={<Pharmaien/>} />
         <Route path='/venteur' element ={<Venteur/>} />
         <Route path='/login' element ={<Login/>} />
+        <Route path='/sign' element ={<Sign/>} />
         <Route path='/products' element ={<Products/>} />
       </Routes>
     </div>

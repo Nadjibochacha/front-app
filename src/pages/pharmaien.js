@@ -4,8 +4,9 @@ import shopp from '../images/logo.png';
 import { FcStatistics } from "react-icons/fc";
 import { MdProductionQuantityLimits } from "react-icons/md";
 import { FaUserCircle } from "react-icons/fa";
-
+import { TbLogout } from "react-icons/tb";
 const Pharmaien = () => {
+  
   return (
     <div id='pharmacy'>
         <div className='menu'>
@@ -23,12 +24,12 @@ const Pharmaien = () => {
               <a href=''><FcStatistics /><span> statistics</span></a> 
             </li>
             <li><a href=''><MdProductionQuantityLimits/><span>products</span></a></li>
-            <li><a href=''><FaUserCircle/><span>users</span></a></li>
+            <li><a href='/'><TbLogout/> <span>logout</span></a></li>
           </ul>
         </div>
         <div className='content w-100'>
           <div className='globl-title'>
-            <h3 >pharmacy dashboard</h3>
+            <h3 >pharmacien dashboard</h3>
             <p>A quick data overview of the inventory.</p>
           </div>
         </div>
