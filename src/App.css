@@ -2,4 +2,11 @@
   text-align: center;
   overflow-x: hidden;
 }
+.App::-webkit-scrollbar{
+  width: 6px;
+  height: 6px;
+}
+.App::-webkit-scrollbar-thumb{
+  background: #003074;
+}
 

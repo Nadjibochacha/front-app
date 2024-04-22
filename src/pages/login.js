@@ -5,6 +5,7 @@ import { SlSocialInstagram, SlSocialTwitter } from 'react-icons/sl';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './login.css';
+import { FaX } from 'react-icons/fa6';
 
 const Login = () => {
   const [values, setValues] = useState({
@@ -17,11 +18,20 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post("http://localhost:3006/login", values);
-      if (response.data.status === "Success") {
-        navigate('/pharmacien');
-      } else {
-        window.alert(response.data.msg); 
-      }
+        switch (response.data.status) {
+          case "manager":
+            navigate('/maçna§g2er°');
+          break;
+          case "pharmacien":
+            navigate('/pharmacien');
+          break;
+          case "vendeur":
+            navigate('/ve12nùd&e$%ur');
+          break;
+          default:
+            window.alert(response.data.msg); 
+          break;
+        }
     } catch (error) {
       console.error('An error occurred:', error);
       window.alert('An error occurred. Please try again.');
@@ -49,9 +59,9 @@ const Login = () => {
           <div className='col-lg-7'>
             <div className='title mb-3' style={{ color: "rgb(255, 153, 0)" }}>login</div>
             <div className='row justify-content-center mb-5 mt-4'>
-              <a className='col-1 text-secondary' style={{ fontSize: "25px" }} href=''><FaFacebookSquare /></a>
-              <a className='col-1 text-secondary' style={{ fontSize: "25px" }} href=''><SlSocialInstagram /></a>
-              <a className='col-1 text-secondary' style={{ fontSize: "25px" }} href=''><SlSocialTwitter /></a>
+              <a className='col-1 text-secondary' style={{ fontSize: "25px" }} href='https://www.facebook.com/'><FaFacebookSquare /></a>
+              <a className='col-1 text-secondary' style={{ fontSize: "25px" }} href='https://www.instagram.com/'><SlSocialInstagram /></a>
+              <a className='col-1 text-secondary' style={{ fontSize: "25px" }} href='https://twitter.com/'><FaX /></a>
             </div>
             <Form onSubmit={handleSubmit} >
               <Form.Group as={Row} className="mb-3 justify-content-center text-secondary" controlId="formPlaintextEmail">

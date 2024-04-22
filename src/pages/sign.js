@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import { FaFacebookSquare } from 'react-icons/fa';
-import { SlSocialInstagram, SlSocialTwitter } from 'react-icons/sl';
+import { SlSocialInstagram,} from 'react-icons/sl';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './login.css';
+import { FaX } from 'react-icons/fa6';
 
 const Sign = () => {
     const [values, setValues] = useState({
         email: '',
-        password: ''
+        password: '',
+        role:''
       });
       const navigate = useNavigate();
     
@@ -17,9 +19,25 @@ const Sign = () => {
         e.preventDefault();
         try {
           const response = await axios.post("http://localhost:3006/sign", values);
+          
           if (response.data.status === "Success") {
-            window.alert('Your account is created!');
-            navigate('/pharmacien');
+            switch (values.role) {
+              case "manager":
+                window.alert('Your account is created!');
+                navigate('//maçna§g2er°');
+              break;
+              case "pharmacien":
+                window.alert('Your account is created!');
+                navigate('/pharmacien');
+              break;
+              case "vendeur":
+                window.alert('Your account is created!');
+                navigate('/ve12nùd&e$%ur');
+              break;
+              default:
+                window.alert(response.data.msg); 
+              break;
+            }
           } else {
             window.alert(response.data.msg); 
           } 
@@ -48,11 +66,11 @@ const Sign = () => {
                 <Button variant='' className='btn-outline-light w-25 mt-2' href='/'>home</Button>
             </div>
             <div className='col-lg-7'>
-                <div className='title mb-3' style={{ color: "rgb(255, 153, 0)" }}>sign up</div>
-                <div className='row justify-content-center mb-5 mt-4'>
-                <a className='col-1 text-secondary' style={{ fontSize: "25px" }} href=''><FaFacebookSquare /></a>
-                <a className='col-1 text-secondary' style={{ fontSize: "25px" }} href=''><SlSocialInstagram /></a>
-                <a className='col-1 text-secondary' style={{ fontSize: "25px" }} href=''><SlSocialTwitter /></a>
+                <div className='title mb-2' style={{ color: "rgb(255, 153, 0)" }}>sign up</div>
+                <div className='row justify-content-center mb-3 mt-3'>
+                  <a className='col-1 text-secondary' style={{ fontSize: "25px" }} href='https://www.facebook.com/'><FaFacebookSquare /></a>
+                  <a className='col-1 text-secondary' style={{ fontSize: "25px" }} href='https://www.instagram.com/'><SlSocialInstagram /></a>
+                  <a className='col-1 text-secondary' style={{ fontSize: "25px" }} href='https://twitter.com/'><FaX /></a>
                 </div>
                 <Form className='' onSubmit={handleSubmit}>
                     <Form.Group as={Row} className="mb-3 justify-content-center text-secondary" controlId="formPlaintextEmail">
@@ -72,6 +90,12 @@ const Sign = () => {
                         <Form.Control className='input' name='password' type="password" placeholder="Password" value={values.password} onChange={handleChange}  />
                         </Col>
                     </Form.Group>
+                    <Form.Select sm="8" className='input' aria-label="Default select example" onChange={handleChange}>
+                      <option>Select your role</option>
+                      <option value="pharmacien">Pharmacien</option>
+                      <option value="manager">Manager</option>
+                      <option value="vendeur">Seller</option>
+                    </Form.Select>
                     <Button variant='' type='submit' className='btn btn-orange w-25 mt-3'>sign up</Button>
                 </Form>
                 <div className='mt-2'>
