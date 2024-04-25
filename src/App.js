@@ -9,6 +9,10 @@ import Sign from './pages/sign';
 import CreateMedic from './components/CreateMedic';
 import ModifyMed from './components/ModifyMed';
 import Manager from './pages/manager';
+import AddProduct from './components/addProduct';
+import UpdateProd from './components/updateProd';
+import AddVend from './components/AddVend';
+import UpdateUser from './components/UpdateUser';
 
 function App() {
   return (
@@ -23,6 +27,10 @@ function App() {
         <Route path='/create10meQd' element={<CreateMedic/>}/>
         <Route path='/upda12te-med/:id' element={<ModifyMed/>}/>
         <Route path='/maçna§g2er°' element={<Manager/>}/>
+        <Route path='/maçna§g2er°/create10meQd' element={<AddProduct/>}/>
+        <Route path='/maçna§g2er°/upda12teProd/:id' element={<UpdateProd/>}/>
+        <Route path='/maçna§g2er°/create10SallER' element={<AddVend/>}/>
+        <Route path='/maçna§g2er°/upda12te10SallER/:id' element={<UpdateUser/>}/>
       </Routes>
     </div>
   );

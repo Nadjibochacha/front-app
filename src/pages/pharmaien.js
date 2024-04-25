@@ -6,7 +6,7 @@ import { TbLogout } from "react-icons/tb";
 const Pharmaien = () => {
     const [med, setMed] = useState([]); // Initialize with an empty array
     useEffect(() => {
-        axios.get("http://localhost:3006/")
+        axios.get("http://localhost:3006/pharmacien")
             .then(res => setMed(res.data))
             .catch(err => console.log(err));
     }, []);
@@ -28,7 +28,7 @@ const Pharmaien = () => {
         <div className='col-6'>
           <h3 >pharmacien dashboard</h3>
         </div>
-        <div className='col-2'><a href='/' className='btn btn-danger'><TbLogout/>logout</a></div>
+        <div className='col-2'><a href='/login' className='btn btn-danger text-uppercase'>logout <TbLogout/></a></div>
       </div>
         <div className='content container pt-2 pb-2'>
           <h2 className='text-uppercase'>establish the list of approved medications</h2>

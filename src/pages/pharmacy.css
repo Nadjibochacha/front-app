@@ -12,13 +12,13 @@
     background: rgb(206, 206, 206);
     min-height:100vh ;
 }
-#pharmacy .globl-title, #manager .globl-title{
+#pharmacy .globl-title{
     text-align: start;
     background: #253852de;
     color: white;
     padding-top: 10px;
 }
-#pharmacy .globl-title .col-6 h3,#manager .globl-title .col-6 h3{
+#pharmacy .globl-title .col-6 h3{
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 0.04rem;

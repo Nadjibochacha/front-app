@@ -3,3 +3,13 @@
     justify-content: space-between;
     
 }
+::-webkit-scrollbar{
+    width: 6px;
+    height: 6px;
+  }
+::-webkit-scrollbar-thumb{
+    background: rgb(255, 153, 0);
+}
+::-webkit-scrollbar-track{
+    background: rgb(196, 191, 191);
+}

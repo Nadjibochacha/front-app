@@ -1,0 +1,43 @@
+#manager{
+    display: flex;
+}
+#manager .globl-title{
+    background: #253852de;
+    color: white;
+    padding-left: 20px;
+}
+#manager .logo{
+    display: flex;
+    align-items: end;
+    gap: 5px;
+    justify-content: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+}
+#manager .globl-title ul{
+    list-style: none;
+    padding: 0;
+    text-align: start;
+    padding-left: 10px;
+}
+#manager .globl-title li{
+    font-size: 1.1rem;
+    margin: 10px 0;
+    padding: 10px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+    border-radius: 8px;
+}
+#manager .globl-title li:hover{
+    background: rgb(26, 140, 216);
+}
+#manager .globl-title li:last-child:hover{
+    background: transparent;
+}
+#manager .content .title{
+    background: #253852de;
+    color: white;
+    padding: 9px;
+    
+}
