@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import { FaFacebookSquare } from 'react-icons/fa';
-import { SlSocialInstagram, SlSocialTwitter } from 'react-icons/sl';
+import { SlSocialInstagram } from 'react-icons/sl';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './login.css';
@@ -13,7 +13,7 @@ const Login = () => {
     password: ''
   });
   const navigate = useNavigate();
-
+  axios.defaults.withCredentials = true;
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -26,7 +26,7 @@ const Login = () => {
             navigate('/pharmacien');
           break;
           case "vendeur":
-            navigate('/ve12nùd&e$%ur');
+            navigate('/vendeur');
           break;
           default:
             window.alert(response.data.msg); 

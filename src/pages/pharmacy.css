@@ -1,5 +1,5 @@
 
-#pharmacy .globl-title img, #manager .globl-title img{
+#pharmacy .globl-title img, #manager .globl-title img,#vendeur .globl-title img{
     width: 35px;
 }
 #pharmacy .globl-title .col-3, #manager .globl-title .col-3{
@@ -8,7 +8,7 @@
     align-items: end;
     padding-bottom: 10px;
 }
-#pharmacy, #manager{
+#pharmacy, #manager, #vendeur{
     background: rgb(206, 206, 206);
     min-height:100vh ;
 }

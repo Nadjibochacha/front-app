@@ -1,11 +1,12 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import './form.css';
 
 const UpdateUser = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const navigate = Navigate();
     const {id} = useParams()
     function handlSubmit (even){
         even.preventDefault();

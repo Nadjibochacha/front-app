@@ -25,6 +25,9 @@ const Manager = () => {
       axios.get("http://localhost:3006/maçna§g2er°/S§all§Er")
         .then(res => setVendeur(res.data))
         .catch(err => console.log(err));
+      axios.get("http://localhost:3006/maçna§g2er°/del!iv§ery")
+        .then(res => setForn(res.data))
+        .catch(err => console.log(err));
   }, []);
   const handelDelete = async (id)=> {
     try{
@@ -176,10 +179,40 @@ const Manager = () => {
             
           </div>
         </div>
-        <div id='' className='tab seller d-none'>
+        <div id='' className='tab d-none'>
           <h2 className='text-uppercase'>manage deliveries</h2>
           <div className='bg-white p-2 m-1'>
-            <a href='/maçna§g2er°/create10meQd' className='btn btn-success w-25'>Add +</a>
+            <a href='/maçna§g2er°/create10SallER' className='btn btn-success w-25'>Add +</a>
+            {
+              Array.isArray(forn) && forn.length > 0 ? (
+                <table className='table'>
+                  <thead>
+                    <tr className='text-capitalize'>
+                      <th>id</th>
+                      <th>Username</th>
+                      <th>Email</th>
+                      <th>operation</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {
+                      forn.map((data, i)=>{
+                        <tr>
+                          <td>{i}</td>
+                          <td>{data.name}</td>
+                          <td>{data.email}</td>
+                          <td>
+                            <a href={`/maçna§g2er°/upda12te10SallER/${i}`} className='btn btn-primary text-capitalize'>Update</a>
+                          </td>
+                        </tr>
+                      })
+                    }
+                  </tbody>
+                </table>
+              ):(
+                <p> No user data available</p>
+              )
+            }
           </div>
         </div>
       </div>
