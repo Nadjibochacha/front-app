@@ -30,6 +30,7 @@ const Venteur = () => {
         <div className='title'>
           <h1 >seller dashboard</h1>
         </div>
+        
       </div>
     </div>
   )

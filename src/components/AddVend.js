@@ -6,14 +6,14 @@ import './form.css';
 const AddVend = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [role, setRole] = useState('');
+    const [role, setRole] = useState("vendeur");
     const navigate = useNavigate();
     function handlSubmit (even){
         even.preventDefault();
-        axios.post('http://localhost:3006/maçna§g2er°/create10SallER',{name,email,role})
+        axios.post('http://localhost:3006/manager/create-seller',{name, email, role})
         .then(res =>{
             console.log(res);
-            navigate('/maçna§g2er°');
+            navigate('/manager');
         }).catch(err=>console.log(err));
     }
   return (
@@ -26,15 +26,16 @@ const AddVend = () => {
             </div>
             <div>
                 <label className='mb-2 mt-2'>Email</label>
-                <input className='w-100 ' required type='email' placeholder='Type' onChange={e=> setEmail(e.target.value)}/>
+                <input className='w-100 ' required type='email' placeholder='Email' onChange={e=> setEmail(e.target.value)}/>
             </div>
             <div>
                 <label className='mb-2 mt-2'>Role</label>
-                <select className='w-100' onChange={e=> setRole(e.target.value)}>
+                <select className='w-100' onChange={e => setRole(e.target.value)}>
                     <option value="vendeur">Seller</option>
-                    <option value="fornisseur">delivery</option>
+                    <option value="fournisseur">Delivery</option>
                 </select>
             </div>
+
             <div className='mt-3'>
                 <button className='btn btn-success p-1 me-2 ps-2 pe-2' type='submit'>Add</button>
                 <button className='btn btn-danger p-1 ps-2 pe-2' type='reset'>Reset</button>

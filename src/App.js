@@ -24,13 +24,13 @@ function App() {
         <Route path='/login' element ={<Login/>} />
         <Route path='/sign' element ={<Sign/>} />
         <Route path='/products' element ={<Products/>} />
-        <Route path='/create10meQd' element={<CreateMedic/>}/>
-        <Route path='/upda12te-med/:id' element={<ModifyMed/>}/>
-        <Route path='/maçna§g2er°' element={<Manager/>}/>
-        <Route path='/maçna§g2er°/create10meQd' element={<AddProduct/>}/>
-        <Route path='/maçna§g2er°/upda12teProd/:id' element={<UpdateProd/>}/>
-        <Route path='/maçna§g2er°/create10SallER' element={<AddVend/>}/>
-        <Route path='/maçna§g2er°/upda12te10SallER/:id' element={<UpdateUser/>}/>
+        <Route path='/pharmacien/create-medication' element={<CreateMedic/>}/>
+        <Route path='/pharmacien/update-medication/:id' element={<ModifyMed/>}/>
+        <Route path='/manager/' element={<Manager/>}/>
+        <Route path='/manager/create-product' element={<AddProduct/>}/>
+        <Route path='/manager/update-product/:id' element={<UpdateProd/>}/>
+        <Route path='/manager/create-seller' element={<AddVend/>}/>
+        <Route path='/manager/update-seller/:id' element={<UpdateUser/>}/>
       </Routes>
     </div>
   );

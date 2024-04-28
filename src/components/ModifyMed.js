@@ -10,7 +10,7 @@ const ModifyMed = () => {
     const {id} = useParams();
     function handlUpdate (even){
         even.preventDefault();
-        axios.put('http://localhost:3006/upda12te-med/'+id,{name,type,disease})
+        axios.put('http://localhost:3006/pharmacien/update-medication/'+id,{name,type,disease})
         .then(res =>{
             console.log(res);
             navigate('/pharmacien');

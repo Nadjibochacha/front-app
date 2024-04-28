@@ -9,7 +9,7 @@ const CreateMedic = () => {
     const navigate = useNavigate();
     function handlSubmit (even){
         even.preventDefault();
-        axios.post('http://localhost:3006/create10meQd',{name,type,disease})
+        axios.post('http://localhost:3006/pharmacien/create-medication',{name,type,disease})
         .then(res =>{
             console.log(res);
             navigate('/pharmacien');

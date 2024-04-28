@@ -13,10 +13,10 @@ const UpdateProd = () => {
     const {id} = useParams()
     function handlSubmit (even){
         even.preventDefault();
-        axios.post('http://localhost:3006/maçna§g2er°/upda12teProd/'+id,{name,count,exp,cat})
+        axios.post('http://localhost:3006/manager/update-product'+id,{name,count,exp,cat})
         .then(res =>{
             console.log(res);
-            navigate('/maçna§g2er°');
+            navigate('/manager');
         }).catch(err=>console.log(err));
     }
   return (

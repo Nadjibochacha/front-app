@@ -12,7 +12,8 @@ const Pharmaien = () => {
     }, []);
     const handelDelete = async (id)=> {
         try{
-            await axios.delete("http://localhost:3006/delete/"+id);
+            // window.confirm('Are you sure?');
+            await axios.delete("http://localhost:3006/pharmacien/delete-medication/"+id);
             window.location.reload();
         }catch(err){
             console.log(err);
@@ -33,7 +34,7 @@ const Pharmaien = () => {
         <div className='content container pt-2 pb-2'>
           <h2 className='text-uppercase'>establish the list of approved medications</h2>
           <div className='bg-white p-2 rounded-2'>
-            <a href='/create10meQd' className='btn btn-success w-25 mb-4'>Add +</a>
+            <a href='/pharmacien/create-medication' className='btn btn-success w-25 mb-4'>Add +</a>
             {Array.isArray(med) && med.length > 0 ? ( 
                     <table className='table mt-2'>
                         <thead>
@@ -52,7 +53,7 @@ const Pharmaien = () => {
                                     <td className='ms-4'>{data.name}</td>
                                     <td className='ms-4'>{data.type}</td>
                                     <td className='ms-4'>{data.disease}</td>
-                                    <td><a href={`/upda12te-med/${data.id}`} className='btn btn-primary me-2 ms-2'>modify</a></td>
+                                    <td><a href={`/pharmacien/update-medication/:id${data.id}`} className='btn btn-primary me-2 ms-2'>modify</a></td>
                                     <td><button onClick={e=>handelDelete(data.id)} className='btn btn-danger'>delete</button></td>
                                 </tr>
                             ))}

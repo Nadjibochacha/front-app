@@ -11,10 +11,10 @@ const AddProduct = () => {
     const navigate = useNavigate();
     function handlSubmit (even){
         even.preventDefault();
-        axios.post('http://localhost:3006/maçna§g2er°/create10meQd',{name,count,exp,cat})
+        axios.post('http://localhost:3006/manager/create-product',{name,count,exp,cat})
         .then(res =>{
             console.log(res);
-            navigate('/maçna§g2er°');
+            navigate('/manager');
         }).catch(err=>console.log(err));
     }
   return (

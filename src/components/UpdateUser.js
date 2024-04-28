@@ -10,10 +10,10 @@ const UpdateUser = () => {
     const {id} = useParams()
     function handlSubmit (even){
         even.preventDefault();
-        axios.put('http://localhost:3006/maçna§g2er°/upda12te10SallER/'+id,{name,email})
+        axios.put('http://localhost:3006/manager/update-seller'+id,{name,email})
         .then(res =>{
             console.log(res);
-            navigate('/maçna§g2er°');
+            navigate('/manager');
         }).catch(err=>console.log(err));
     }
   return (
