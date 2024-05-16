@@ -41,3 +41,16 @@
     padding: 9px;
     
 }
+#manager .content .btn-collapse{
+    
+}
+#manager::-webkit-scrollbar,#vendeur::-webkit-scrollbar,#pharmacy::-webkit-scrollbar{
+    width: 6px;
+    height: 6px;
+  }
+#pharmacy::-webkit-scrollbar-thumb,#vendeur::-webkit-scrollbar-thumb,#manager::-webkit-scrollbar-thumb{
+    background: rgb(255, 153, 0);
+}
+#pharmacy::-webkit-scrollbar-track,#vendeur::-webkit-scrollbar-track,#manager::-webkit-scrollbar-track{
+    background: rgb(196, 191, 191);
+}

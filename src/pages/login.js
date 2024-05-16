@@ -20,7 +20,7 @@ const Login = () => {
       const response = await axios.post("http://localhost:3006/login", values);
         switch (response.data.status) {
           case "manager":
-            navigate('/maçnag2er');
+            navigate('/manager');
           break;
           case "pharmacien":
             navigate('/pharmacien');

@@ -1,0 +1,18 @@
+#qr{
+    padding: 20px;
+    background: #253852de;
+    color: white;
+    text-align: center;
+    min-height:100vh;
+}
+#qr h1{
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    line-height: 4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+#qr #reader{
+   
+}

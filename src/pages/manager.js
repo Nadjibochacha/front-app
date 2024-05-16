@@ -15,6 +15,7 @@ const Manager = () => {
   const [forn, setForn] = useState([]);
   const [vendeur, setVendeur] = useState([]);
   const [prod, setProd] = useState([]); // Initialize with an empty array
+  const [open, setOpen] = useState(false);
   useEffect(() => {
     axios
       .get("http://localhost:3006/manager/storage")
@@ -41,9 +42,24 @@ const Manager = () => {
       console.log(err);
     }
   };
-
-  let dateNow = new Date();
-
+  const deletCommnd = async (id)=>{
+    try {
+      await axios.delete("http://localhost:3006/manager/delete-user/" + id);
+      window.location.reload();
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  const deleteUser = async (id)=>{
+    try {
+      await axios.delete("http://localhost:3006/manager/delete-user/" + id);
+      window.location.reload();
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  const today = new Date();
+  // const fullDate = today.toDateString();
   return (
     <div id="manager" className="row justify-content-between">
       <div className="globl-title col-lg-2 col-3">
@@ -94,41 +110,33 @@ const Manager = () => {
                     <th>name</th>
                     <th>countity</th>
                     <th>expiration</th>
-                    <th>catigory</th>
+                    <th>prescription</th>
                     <th colSpan={2}>operation</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {prod.map((data, i) => {
-                    <tr key={i}>
-                      <td>{i}</td>
-                      <td>{data.name}</td>
-                      <td>{data.count}</td>
-                      {dateNow.getFullYear - Number(data.exp) > 20 ? (
-                        <td className="">{data.exp}</td>
-                      ) : (
-                        <td className="text-danger">{data.exp}</td>
-                      )}
-
-                      <td>{data.cat}</td>
-                      <td>
-                        <a
-                          href={`/manager/update-product/${data.id}`}
-                          className="btn btn-primary"
-                        >
-                          Update
-                        </a>
-                      </td>
-                      <td>
-                        <button
-                          className="btn btn-danger"
-                          onClick={(e) => handelDelete(data.id)}
-                        >
-                          Delete
-                        </button>
-                      </td>
-                    </tr>;
-                  })}
+                  {
+                    prod.map((data, i) => {
+                      return (
+                        <tr key={i}>
+                          <td>{i}</td>
+                          <td>{data.nom}</td>
+                          <td>{data.qte_stock}</td>
+                          <td className="">{data.date_per}</td>
+                          <td>{data.type}</td>
+                          <td><a href={`/manager/update-product/${data.id_s}`} className='btn btn-primary me-2 ms-2'>modify</a></td>
+                          <td>
+                            <button
+                              className="btn btn-danger"
+                              onClick={() => handelDelete(data.id_s)}
+                            >
+                              delete
+                            </button>
+                          </td>
+                        </tr>
+                      );
+                    })
+                  }
                 </tbody>
               </table>
             ) : (
@@ -139,27 +147,61 @@ const Manager = () => {
         <div id="" className="tab order d-none">
           <h2 className="text-uppercase">establish purchase order</h2>
           <div className="bg-white p-2 m-1">
-            <a href="/manager/create-command" className="btn btn-success w-25">
+            <a href="/manager/create-command" className="btn btn-success w-25 mb-4">
               Add Order +
             </a>
-            {Array.isArray(command) && command.length > 0 ? (
-              <table className="table">
-                <thead>
-                  <tr className="text-capitalize">
-                    <th>id</th>
-                    <th>name</th>
-                    <th>countity</th>
-                    <th>expiration</th>
-                    <th>catigory</th>
-                    <th colSpan={2}>operation</th>
-                  </tr>
-                </thead>
-                <tbody>{command.map((data, i) => {})}</tbody>
-              </table>
+            {/* {Array.isArray(command) && command.length > 0 ? (
+                command.map((data,i)=>{
+                  <div key={i}>
+                                <div className="mb-2">
+            <ListGroup>
+      
+              <ListGroup.Item variant="info">
+              <div
+                      onClick={() => setOpen(!open)}
+                      aria-controls="example-collapse-text"
+                      aria-expanded={open}
+                      className="btn-collapse"
+                    >
+                      command 
+              </div>
+                    <Collapse in={open}>
+                      <div id="example-collapse-text">
+                        <table className='table'>
+                          <thead>
+                              <tr>
+                                  <th>name</th>
+                                  <th>count</th>
+                              </tr>
+                          </thead>
+                          <tbody id='commnd'>
+                              
+                                  <tr key={i}>
+                                    <td>{data.name}</td>
+                                    <td>{data.count}</td>
+                                  </tr>
+                                
+                              
+                          </tbody>
+                        </table>
+                        <div className='row justify-content-around bg-white p-3 m-0'>
+                            <div className='btn btn-success text-uppercase w-25'>print</div>
+                            <div className='btn btn-danger text-uppercase w-25' onClick={()=>deletCommnd(command.id)}>delete</div>
+                        </div>
+                      </div>
+                    </Collapse>
+              </ListGroup.Item>
+      
+            </ListGroup>
+                    
+                  </div>
+                })
             ) : (
               <p>No command data available </p>
-            )}
+            )} */}
+
           </div>
+          
         </div>
         <div id="" className="tab sale d-none">
           <h2 className="text-uppercase">consult sale</h2>
@@ -176,18 +218,14 @@ const Manager = () => {
                 <thead>
                   <tr className="text-capitalize">
                     <th>id</th>
-                    <th>Username</th>
                     <th>Email</th>
-                    <th>operation</th>
+                    <th colSpan={2}>operation</th>
                   </tr>
                 </thead>
                 <tbody>
                   {vendeur.map((data, i) => (
                     <tr key={i}>
-                      {" "}
-                      {/* Added key attribute for each row */}
                       <td>{i}</td>
-                      <td>{data.name}</td>
                       <td>{data.email}</td>
                       <td>
                         <a
@@ -196,6 +234,9 @@ const Manager = () => {
                         >
                           Update
                         </a>
+                      </td>
+                      <td>
+                        <div className="btn btn-danger" onClick={e=>deleteUser(i)}>delete</div>
                       </td>
                     </tr>
                   ))}
@@ -217,9 +258,8 @@ const Manager = () => {
                 <thead>
                   <tr className="text-capitalize">
                     <th>id</th>
-                    <th>Username</th>
                     <th>Email</th>
-                    <th>operation</th>
+                    <th colSpan={2}>operation</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -228,7 +268,6 @@ const Manager = () => {
                       {" "}
                       {/* Added key attribute for each row */}
                       <td>{i}</td>
-                      <td>{data.name}</td>
                       <td>{data.email}</td>
                       <td>
                         <a
@@ -237,6 +276,9 @@ const Manager = () => {
                         >
                           Update
                         </a>
+                      </td>
+                      <td>
+                        <div className="btn btn-danger" onClick={e=>deleteUser(i)}>delete</div>
                       </td>
                     </tr>
                   ))}

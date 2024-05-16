@@ -41,8 +41,7 @@ const Pharmaien = () => {
                             <tr>
                               <th>id</th>
                               <th>medication</th>
-                              <th>type</th>
-                              <th>disease</th>
+                              <th>prescription</th>
                               <th colSpan={2}>operation</th>
                             </tr>
                         </thead>
@@ -52,8 +51,7 @@ const Pharmaien = () => {
                                     <td className='ms-2'>{i}</td>
                                     <td className='ms-4'>{data.name}</td>
                                     <td className='ms-4'>{data.type}</td>
-                                    <td className='ms-4'>{data.disease}</td>
-                                    <td><a href={`/pharmacien/update-medication/:id${data.id}`} className='btn btn-primary me-2 ms-2'>modify</a></td>
+                                    <td><a href={`/pharmacien/update-medication/${data.id}`} className='btn btn-primary me-2 ms-2'>modify</a></td>
                                     <td><button onClick={e=>handelDelete(data.id)} className='btn btn-danger'>delete</button></td>
                                 </tr>
                             ))}

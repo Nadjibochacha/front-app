@@ -5,12 +5,11 @@ import './form.css';
 const ModifyMed = () => {
     const [name, setName] = useState('');
     const [type, setType] = useState('');
-    const [disease, setDisease] = useState('');
     const navigate = useNavigate();
     const {id} = useParams();
     function handlUpdate (even){
         even.preventDefault();
-        axios.put('http://localhost:3006/pharmacien/update-medication/'+id,{name,type,disease})
+        axios.put('http://localhost:3006/pharmacien/update-medication/'+id,{name,type})
         .then(res =>{
             console.log(res);
             navigate('/pharmacien');
@@ -26,11 +25,11 @@ const ModifyMed = () => {
             </div>
             <div>
                 <label className='mb-2 mt-2'>Type</label>
-                <input className='w-100 ' required type='text' placeholder='Type' onChange={e=> setType(e.target.value)}/>
-            </div>
-            <div>
-                <label className='mb-2 mt-2'>Disease</label>
-                <input className='w-100 ' required type='text' placeholder='Disease' onChange={e=> setDisease(e.target.value)}/>
+                <select className="input w-100 p-1" onChange={e=> setType(e.target.value)} required>
+                    <option >Select Type</option>
+                    <option value="with">By prescription</option>
+                    <option value="without">Without prescription</option>
+                </select>
             </div>
             <div className='mt-3'>
                 <button className='btn btn-success p-1 me-2 ps-2 pe-2' type='submit'>Update</button>

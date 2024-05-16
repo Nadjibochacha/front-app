@@ -1,15 +1,15 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 import './form.css';
 const CreateMedic = () => {
     const [name, setName] = useState('');
     const [type, setType] = useState('');
-    const [disease, setDisease] = useState('');
     const navigate = useNavigate();
     function handlSubmit (even){
         even.preventDefault();
-        axios.post('http://localhost:3006/pharmacien/create-medication',{name,type,disease})
+        axios.post('http://localhost:3006/pharmacien/create-medication',{name,type})
         .then(res =>{
             console.log(res);
             navigate('/pharmacien');
@@ -25,12 +25,13 @@ const CreateMedic = () => {
             </div>
             <div>
                 <label className='mb-2 mt-2'>Type</label>
-                <input className='w-100 ' required type='text' placeholder='Type' onChange={e=> setType(e.target.value)}/>
+                <select className="input w-100" onChange={e=> setType(e.target.value)} required>
+                    <option >Select Type</option>
+                    <option value="with">By prescription</option>
+                    <option value="without">Without prescription</option>
+                </select>
             </div>
-            <div>
-                <label className='mb-2 mt-2'>Disease</label>
-                <input className='w-100 ' required type='text' placeholder='Disease' onChange={e=> setDisease(e.target.value)}/>
-            </div>
+            
             <div className='mt-3'>
                 <button className='btn btn-success p-1 me-2 ps-2 pe-2' type='submit'>Add</button>
                 <button className='btn btn-danger p-1 ps-2 pe-2' type='reset'>Reset</button>

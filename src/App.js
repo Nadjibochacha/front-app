@@ -13,6 +13,8 @@ import AddProduct from './components/addProduct';
 import UpdateProd from './components/updateProd';
 import AddVend from './components/AddVend';
 import UpdateUser from './components/UpdateUser';
+import AddCommdM from './components/AddCommdM';
+import Qrreader from './components/qrreader';
 
 function App() {
   return (
@@ -26,11 +28,13 @@ function App() {
         <Route path='/products' element ={<Products/>} />
         <Route path='/pharmacien/create-medication' element={<CreateMedic/>}/>
         <Route path='/pharmacien/update-medication/:id' element={<ModifyMed/>}/>
-        <Route path='/manager/' element={<Manager/>}/>
+        <Route path='/manager' element={<Manager/>}/>
         <Route path='/manager/create-product' element={<AddProduct/>}/>
         <Route path='/manager/update-product/:id' element={<UpdateProd/>}/>
         <Route path='/manager/create-seller' element={<AddVend/>}/>
         <Route path='/manager/update-seller/:id' element={<UpdateUser/>}/>
+        <Route path='/manager/create-command' element={<AddCommdM/>}/>
+        <Route path='/qr-reader' element={<Qrreader/>}/>
       </Routes>
     </div>
   );
