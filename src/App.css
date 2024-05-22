@@ -2,4 +2,14 @@
   text-align: center;
   overflow-x: hidden;
 }
+.App::-webkit-scrollbar{
+  width: 6px;
+  height: 6px;
+}
+.App::-webkit-scrollbar-thumb{
+  background: rgb(255, 153, 0);
+}
+.App::-webkit-scrollbar-track{
+  background: rgb(196, 191, 191);
+}
 

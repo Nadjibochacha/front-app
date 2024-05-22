@@ -1,26 +1,27 @@
 
-#pharmacy .globl-title img, #manager .globl-title img,#vendeur .globl-title img{
+#pharmacy .globl-title img, #manager .globl-title img,#vendeur .globl-title img, #four .globl-title img, #client .globl-title img{
     width: 35px;
 }
-#pharmacy .globl-title .col-3, #manager .globl-title .col-3{
+#pharmacy .globl-title .col-3, #manager .globl-title .col-3, #four .globl-title .col-3, #client .globl-title .col-3{
     display: flex;
     justify-content: center;
     align-items: end;
     padding-bottom: 10px;
 }
-#pharmacy, #manager, #vendeur{
+#pharmacy, #manager, #vendeur, #four, #client{
     background: rgb(206, 206, 206);
     min-height:100vh ;
 }
-#pharmacy .globl-title{
+#pharmacy .globl-title, #four .globl-title, #client .globl-title{
     text-align: start;
     background: #253852de;
     color: white;
     padding-top: 10px;
 }
-#pharmacy .globl-title .col-6 h3{
+#pharmacy .globl-title .col-6 h3, #client .globl-title .col-6 h3{
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 0.04rem;
     text-align: center;
 }
+

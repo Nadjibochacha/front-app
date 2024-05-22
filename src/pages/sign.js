@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
 import "./login.css";
 
 const Sign = () => {
@@ -19,6 +20,7 @@ const Sign = () => {
       const response = await axios.post("http://localhost:3006/sign", values);
 
       if (response.data.status === "Success") {
+        Cookies.set('token', 'our-jsonwebtoken-secret-key', { expires: 1, httpOnly: true });
         switch (values.role) {
           case "manager":
             window.alert("Your account is created!");
@@ -134,7 +136,6 @@ const Sign = () => {
                   />
                 </Col>
               </Form.Group>
-
               <Form.Select
                 sm="8"
                 className="input"

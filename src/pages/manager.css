@@ -35,22 +35,29 @@
 #manager .globl-title li:last-child:hover, #vendeur .globl-title li:last-child:hover{
     background: transparent;
 }
-#manager .content .title, #vendeur .content .title{
+#manager .content .title, #vendeur .content .title,#client .content .title-client{
     background: #253852de;
     color: white;
     padding: 9px;
     
 }
-#manager .content .btn-collapse{
-    
-}
-#manager::-webkit-scrollbar,#vendeur::-webkit-scrollbar,#pharmacy::-webkit-scrollbar{
+#manager::-webkit-scrollbar,#vendeur::-webkit-scrollbar,#pharmacy::-webkit-scrollbar, #client::-webkit-scrollbar{
     width: 6px;
     height: 6px;
   }
-#pharmacy::-webkit-scrollbar-thumb,#vendeur::-webkit-scrollbar-thumb,#manager::-webkit-scrollbar-thumb{
+#pharmacy::-webkit-scrollbar-thumb,#vendeur::-webkit-scrollbar-thumb,#manager::-webkit-scrollbar-thumb, #client::-webkit-scrollbar-thumb{
     background: rgb(255, 153, 0);
 }
-#pharmacy::-webkit-scrollbar-track,#vendeur::-webkit-scrollbar-track,#manager::-webkit-scrollbar-track{
+#pharmacy::-webkit-scrollbar-track,#vendeur::-webkit-scrollbar-track,#manager::-webkit-scrollbar-track, #client::-webkit-scrollbar-track{
     background: rgb(196, 191, 191);
+}
+#vendeur .showfacnum, #manager .showfacnum,#four .showfacnum{
+    height: 9.5rem;
+    overflow-y: scroll;
+    
+}
+
+#vendeur .showfacnum::-webkit-scrollbar, #manager .showfacnum::-webkit-scrollbar ,#four .showfacnum::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
 }

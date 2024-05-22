@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './footer.css';
 import logo1 from '../images/salco.png';
 import { FaLocationArrow } from "react-icons/fa";
@@ -9,8 +9,21 @@ import { SlSocialInstagram } from "react-icons/sl";
 import { SlSocialTwitter } from "react-icons/sl";
 import { SlSocialLinkedin } from "react-icons/sl";
 import Button from 'react-bootstrap/esm/Button';
+import axios from 'axios';
 
 const Footer = () => {
+    const [value, setValue] = useState({
+        name: '',
+        message: ''
+    })
+    const SendCmt = async()=>{
+        await axios.post('http://localhost:3006/add-comment',{value})
+            .then(res=>{
+                window.alert(res.data);
+            })
+            .catch(err=>console.log(err));
+        // console.log(value);
+    }
   return (
     <div id='footer'>
         <div className='row justify-content-between'>
@@ -52,13 +65,13 @@ const Footer = () => {
                 <Form>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                         <Form.Label>Full Name</Form.Label>
-                        <Form.Control type="text"/>
+                        <Form.Control type="text" onChange={e=>value.name = e.target.value}/>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                         <Form.Label>Comment</Form.Label>
-                        <Form.Control as="textarea" rows={3} />
+                        <Form.Control as="textarea" rows={3} onChange={e=> value.message = e.target.value}/>
                     </Form.Group>
-                    <Button variant='outline-light' className='w-25 '>Send</Button>
+                    <Button variant='outline-light' className='w-25 ' onClick={SendCmt} >Send</Button>
                 </Form>
             </div>
             <div className="foot-bar text-center mt-5">

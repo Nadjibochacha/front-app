@@ -12,18 +12,18 @@ const Newproducts = () => {
        <div id='new' className='mt-4'>
             <div className='title'>medications</div>
             <div className='row mt-3'>
-                <Product title='something1' state='new' src ={product} price="20" />
-                <Product title='something2' state='new' src ={product1} price="31" />
-                <Product title='something3' state='new' src ={product2} price="53" />
-                <Product title='something4' state='new' src ={product3} price="26" />
+                <Product title='medication 1' state='new' src ={product} price="670" />
+                <Product title='medication 2' state='new' src ={product1} price="1030" />
+                <Product title='medication 3' state='new' src ={product2} price="1760" />
+                <Product title='medication 4' state='new' src ={product3} price="860" />
             </div>
             <div className='row mt-3'>
-                <Product title='something1' state='-30%' src ={product} price="20" />
-                <Product title='something2' state='-30%' src ={product1} price="31" />
-                <Product title='something3' state='-30%' src ={product2} price="53" />
-                <Product title='something4' state='-30%' src ={product3} price="26" />
+                <Product title='medication 1' state='-30%' src ={product} price="20" />
+                <Product title='medication 2' state='-30%' src ={product1} price="31" />
+                <Product title='medication 3' state='-30%' src ={product2} price="53" />
+                <Product title='medication 4' state='-30%' src ={product3} price="26" />
             </div>
-            <Button variant='' className='btn-orange mt-4' href='/products'>all products</Button>
+            <Button variant='' className='btn-orange mt-4' href='/buy-products'>all products</Button>
        </div>
     )
 }

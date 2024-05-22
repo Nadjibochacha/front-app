@@ -5,6 +5,7 @@ import { SlSocialInstagram } from 'react-icons/sl';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './login.css';
+import Cookies from "js-cookie";
 import { FaX } from 'react-icons/fa6';
 
 const Login = () => {
@@ -18,19 +19,25 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post("http://localhost:3006/login", values);
-        switch (response.data.status) {
-          case "manager":
-            navigate('/manager');
-          break;
-          case "pharmacien":
-            navigate('/pharmacien');
-          break;
-          case "vendeur":
-            navigate('/vendeur');
-          break;
-          default:
-            window.alert(response.data.msg); 
-          break;
+        if (response.data.msg === 'success') {
+          Cookies.set('token', 'our-jsonwebtoken-secret-key', { expires: 1, httpOnly: true });
+          switch (response.data.status) {
+            case "manager":
+              navigate('/manager');
+            break;
+            case "pharmacien":
+              navigate('/pharmacien');
+            break;
+            case "vendeur":
+              navigate('/vendeur');
+            break;
+            case "fournisseur":
+              navigate(`/fournisseur/${values.email}`);
+            break;
+            default:
+              window.alert(response.data.msg); 
+            break;
+          }
         }
     } catch (error) {
       console.error('An error occurred:', error);

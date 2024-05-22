@@ -4,7 +4,6 @@ import Home from './pages/home';
 import Pharmaien from './pages/pharmaien';
 import Venteur from './pages/venteur';
 import Login from './pages/login';
-import Products from './pages/products';
 import Sign from './pages/sign';
 import CreateMedic from './components/CreateMedic';
 import ModifyMed from './components/ModifyMed';
@@ -15,17 +14,20 @@ import AddVend from './components/AddVend';
 import UpdateUser from './components/UpdateUser';
 import AddCommdM from './components/AddCommdM';
 import Qrreader from './components/qrreader';
+import Fournisseur from './pages/fournisseur';
+import Client from './pages/client';
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path='/' element ={<Home/>} />
+        <Route path='/buy-products' element ={<Client/>} />
         <Route path='/pharmacien' element ={<Pharmaien/>} />
         <Route path='/vendeur' element ={<Venteur/>} />
+        <Route path='/fournisseur/:id' element ={<Fournisseur/>} />
         <Route path='/login' element ={<Login/>} />
         <Route path='/sign' element ={<Sign/>} />
-        <Route path='/products' element ={<Products/>} />
         <Route path='/pharmacien/create-medication' element={<CreateMedic/>}/>
         <Route path='/pharmacien/update-medication/:id' element={<ModifyMed/>}/>
         <Route path='/manager' element={<Manager/>}/>

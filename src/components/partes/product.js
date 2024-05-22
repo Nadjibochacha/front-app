@@ -16,9 +16,8 @@ class Product extends React.Component {
                 <Card.Body>
                     <Card.Title>{this.props.title}</Card.Title>
                     <Card.Text>
-                        Price: {this.props.price}$
+                        Price: {this.props.price} DA 
                     </Card.Text>
-                    <Button variant="" className='btn-outline-orange'>buy now</Button>
                 </Card.Body>
             </Card>
         );

@@ -20,7 +20,7 @@ const Header = () => {
             <Nav.Link href="/#new" className='item'>medications</Nav.Link>
             <Nav.Link href="/#footer" className='item'>contact</Nav.Link>
             <Nav.Link href="/login" className='item'>login</Nav.Link>
-            <Nav.Link className='item'><FaCartShopping/></Nav.Link>
+            <Nav.Link href='/buy-products' className='item'><FaCartShopping/></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -2,4 +2,10 @@
     display: flex;
     justify-content:center;
     gap: 14px;
+    height: 15rem;
+    overflow: hidden;
+}
+#feed .row::-webkit-scrollbar{
+    width: 0;
+    height: 0;
 }
