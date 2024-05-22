@@ -23,7 +23,6 @@ const About = () => {
                             Experience the difference at SalCo Pharmacy today. Your well-being is our priority. 
                             Visit us online for expert guidance and peace of mind. 
                         </p>
-                        <Button variant='' className='btn btn-orange mt-3' href='/products'>shop now</Button>
                     </div>
                 </div>
             </div>

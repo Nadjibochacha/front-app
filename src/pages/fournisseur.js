@@ -54,7 +54,11 @@ const Fournisseur = () => {
                 prix = prices[i];
                 axios.post('http://localhost:3006/delivery/facture_achat',{element,prix})
             }))
-            .then(res=>console.log(res.data))
+            .then(res=>{
+                console.log(res.data);
+                alert('Bill sent :)');
+                window.location.reload();
+            })
         } catch (err) {
             console.log(err)
         }

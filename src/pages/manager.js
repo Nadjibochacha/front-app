@@ -34,23 +34,19 @@ const Manager = () => {
   };
   
   useEffect(() => {
-    axios
-      .get("http://localhost:3006/manager/storage")
+    axios.get("http://localhost:3006/manager/storage")
       .then((res) => setProd(res.data))
       .catch((err) => console.log(err));
-    axios
-      .get("http://localhost:3006/manager/commands")
+    axios.get("http://localhost:3006/manager/commands")
       .then((res) => {
         setCommand(res.data);
         updateCmd(res.data);
       })
       .catch((err) => console.log(err));
-    axios
-      .get("http://localhost:3006/manager/sellers")
+    axios.get("http://localhost:3006/manager/sellers")
       .then((res) => setVendeur(res.data))
       .catch((err) => console.log(err));
-    axios
-      .get("http://localhost:3006/manager/delivery")
+    axios.get("http://localhost:3006/manager/delivery")
       .then((res) => setForn(res.data))
       .catch((err) => console.log(err));
     axios.get("http://localhost:3006/sales")
@@ -67,11 +63,13 @@ const Manager = () => {
       })
       .catch(error=>console.log(error));
   }, []);
+
   const updateSale = (allsalles) => {
     const salesSet = new Set();
     allsalles.forEach(sale => salesSet.add(sale.num_fac));
     setSalle(Array.from(salesSet));
   };
+
   const handelDelete = async (id) => {
     try {
       await axios.delete(`http://localhost:3006/manager/delete-product/${id}`);
@@ -98,6 +96,7 @@ const Manager = () => {
       console.log(err);
     }
   };
+
   const calcul_daily_pro = ()=>{
     Allsalle.forEach(element => {
       if (element.date === currentDate) {
@@ -106,6 +105,7 @@ const Manager = () => {
     });
     return dail_pro;
   }
+
   const updateCmd = (allsalles) => {
     const salesSet = new Set();
     allsalles.forEach((sale) => salesSet.add(sale.num_cmd));
@@ -123,6 +123,7 @@ const Manager = () => {
     setFacture(newFacture);
     setShowFactureTable(true);
   };
+
   const showFacture = (i) => {
     const newFacture = [];
     let newTotal = 0;
@@ -136,6 +137,7 @@ const Manager = () => {
     setTotal(newTotal);
     setShowFactureTable(!showFactureTable);
   };
+
   const showFactureA = (i) => {
     const newFacture = [];
     let newTotal = 0;
@@ -150,6 +152,7 @@ const Manager = () => {
     setShowFactureAchat(!showFactureAchat);
     console.log(factureA);
   };
+
   const date =  new Date()
   const currentDate =date.toDateString();
 
@@ -168,7 +171,7 @@ const Manager = () => {
             <span>establish purchase order</span>
           </li>
           <li onClick={() => showTab(2)}>
-            <span>Colsult order bill</span>
+            <span>Consult order bill</span>
           </li>
           <li onClick={() => showTab(3)}>
             <span>consult sale</span>

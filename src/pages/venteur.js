@@ -167,13 +167,13 @@ const Venteur = () => {
   };
 
   const removeOrder = async (i) => {
-    console.log(i);
+    // console.log(i);
     const confirmed = window.confirm(
       "Are you sure you want to delete this item?"
     );
+    const id = i;
     if (confirmed) {
-      await axios
-        .post("http://localhost:3006/selles/delete-order/" + i)
+      await axios.delete("http://localhost:3006/selles/delete-order/" + id)
         .then((res) => console.log(res.data))
         .catch((err) => console.log(err));
     }
@@ -194,7 +194,7 @@ const Venteur = () => {
       )
   }else{
   return (
-    <div id="vendeur" className="row justify-content-between">
+    <div id="vendeur" className="row justify-content-between pe-1">
       <div className="globl-title col-lg-2 col-3">
             <div className="logo">
               <img src={shopp} alt="logo" />
@@ -231,7 +231,7 @@ const Venteur = () => {
               </li>
             </ul>
           </div>
-          <div className="content col-9 p-0">
+          <div className="content col-9 p-0 me-1">
             <div className="title">
               <h1>Seller Dashboard</h1>
             </div>
